@@ -18,7 +18,16 @@ function randomNUmber() {
 
   const sum = random1 + random2;
 
-  
+  checkBtn.addEventListener("click", function () {
+    var value = parseInt(resultInput.value);
+    console.log(value);
+    if (sum === value) {
+      alert("The answer is Correct ✔️");
+      value = " ";
+    } else {
+      alert("The answer is False ❌");
+    }
+  });
 }
 randomNUmber();
-
+refreshBtn.addEventListener("click", randomNUmber);
